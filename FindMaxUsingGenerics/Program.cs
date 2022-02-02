@@ -15,7 +15,7 @@ namespace FindMaxUsingGenerics
             Maximum maximum = new Maximum();
 
             Console.Write("Please choose an option: ");
-            Console.WriteLine("\n1. Find Max Of Three Int Number \n2. Find Max Of Three Float Number");
+            Console.WriteLine("\n1. Find Max Of Three Int Number \n2. Find Max Of Three Float Number \n3. Find Max Of Three strings");
 
             int option = int.Parse(Console.ReadLine());
             switch (option)
