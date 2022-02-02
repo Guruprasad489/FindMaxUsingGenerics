@@ -10,7 +10,11 @@ namespace FindMaxUsingGenerics
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to \"Find Max of three numbers using generics\" program");
+            Console.WriteLine("Welcome to \"Find Max of three numbers using generics\" program\n");
+
+            Maximum maximum = new Maximum();
+            int intmax = maximum.GetMaxOfThree(66, 55, 78);
+            Console.WriteLine("Maximum of three integers is: "+ intmax);
         }
     }
 }
