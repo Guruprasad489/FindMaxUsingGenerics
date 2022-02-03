@@ -6,10 +6,19 @@ using System.Threading.Tasks;
 
 namespace FindMaxUsingGenerics
 {
-    public class Maximum
+    public class Maximum<T> where T : IComparable                   //Generic class
     {
+        public T num1, num2, num3;
+
+        public Maximum(T num1, T num2,T num3)                      //Constructor
+        {
+            this.num1 = num1;
+            this.num2 = num2;
+            this.num3 = num3;
+        }
+
         //Using generic Method to find Max out of three values
-        public T GetMaxOfThree<T>(T num1, T num2, T num3) where T : IComparable
+        private static T GetMaxOfThree(T num1, T num2, T num3)       
         {
             if (num1.CompareTo(num2) >= 0 && num1.CompareTo(num3) >= 0)
             {
@@ -25,6 +34,11 @@ namespace FindMaxUsingGenerics
             }
             return default;
         }
-        
+        public T GetMax()
+        {
+            T maxValue = Maximum<T>.GetMaxOfThree(this.num1, this.num2, this.num3);
+            return maxValue;
+        }
+
     }
 }
