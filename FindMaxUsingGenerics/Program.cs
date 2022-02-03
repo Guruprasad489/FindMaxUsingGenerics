@@ -22,20 +22,20 @@ namespace FindMaxUsingGenerics
                 {
                     case 1:
                         int[] intArray = { 24, 36, 09, 21 };
-                        int intMax = new Maximum<int>(intArray).GetMax();
-                        Console.WriteLine("Maximum out of integers is: " + intMax);
+                        Maximum<int> intMax = new Maximum<int>(intArray);
+                        intMax.PrintMax();
                         Console.ReadLine();
                         break;
                     case 2:
                         float[] floatArray = { 24.36f, 36.24f, 09.21f, 21.09f };
-                        float floatMax = new Maximum<float>(floatArray).GetMax();
-                        Console.WriteLine("Maximum out of floating values is: " + floatMax);
+                        Maximum<float> floatMax = new Maximum<float>(floatArray);
+                        floatMax.PrintMax();
                         Console.ReadLine();
                         break;
                     case 3:
                         string[] strArray = { "Apple", "Peach", "Banana", "Mango" };
-                        string stringMax = new Maximum<string>(strArray).GetMax();
-                        Console.WriteLine("Maximum out of strings is: "+ stringMax);
+                        Maximum<string> stringMax = new Maximum<string>(strArray);
+                        stringMax.PrintMax();
                         Console.ReadLine();
                         break;
                     case 4:

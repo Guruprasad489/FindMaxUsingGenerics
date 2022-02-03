@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace FindMaxUsingGenerics
 {
-    public class Maximum<T> where T : IComparable                   //Generic class
+    public class Maximum<T> where T : IComparable           //Generic class
     {
         public T[] genValue;
 
-        public Maximum(T[] genValue)                      //Constructor
+        public Maximum(T[] genValue)                       //Constructor
         {
             this.genValue = genValue;
         }
@@ -31,6 +31,11 @@ namespace FindMaxUsingGenerics
         {
             T maxValue = GetMaxOfThree(this.genValue);
             return maxValue;
+        }
+        public void PrintMax()
+        {
+            T maxValue = GetMaxOfThree(this.genValue);
+            Console.WriteLine("Maximum value is : "+ maxValue);
         }
 
     }
