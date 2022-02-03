@@ -21,21 +21,21 @@ namespace FindMaxUsingGenerics
                 switch (option)
                 {
                     case 1:
-                        int intnum1 = 66, intnum2 = 78, intnum3 = 56;
-                        int intMax = new Maximum<int>(intnum1, intnum2, intnum3).GetMax();
-                        Console.WriteLine("Maximum out of {0}, {1}, {2} integers is: {3}", intnum1, intnum2, intnum3, intMax);
+                        int[] intArray = { 24, 36, 09, 21 };
+                        int intMax = new Maximum<int>(intArray).GetMax();
+                        Console.WriteLine("Maximum out of integers is: " + intMax);
                         Console.ReadLine();
                         break;
                     case 2:
-                        float floatnum1 = 66.25f, floatnum2 = 24.55f, floatnum3 = 56.78f;
-                        float floatMax = new Maximum<float>(floatnum1, floatnum2, floatnum3).GetMax();
-                        Console.WriteLine("Maximum out of {0}, {1}, {2} floating values is: {3}", floatnum1, floatnum2, floatnum3, floatMax);
+                        float[] floatArray = { 24.36f, 36.24f, 09.21f, 21.09f };
+                        float floatMax = new Maximum<float>(floatArray).GetMax();
+                        Console.WriteLine("Maximum out of floating values is: " + floatMax);
                         Console.ReadLine();
                         break;
                     case 3:
-                        string str1 = "Apple", str2 = "Peach", str3 = "Banana";
-                        string stringMax = new Maximum<string>(str1, str2, str3).GetMax();
-                        Console.WriteLine("Maximum out of {0}, {1}, {2} strings is: {3}", str1, str2, str3, stringMax);
+                        string[] strArray = { "Apple", "Peach", "Banana", "Mango" };
+                        string stringMax = new Maximum<string>(strArray).GetMax();
+                        Console.WriteLine("Maximum out of strings is: "+ stringMax);
                         Console.ReadLine();
                         break;
                     case 4:
